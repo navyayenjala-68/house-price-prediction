@@ -1,0 +1,7 @@
+# Python cache
+__pycache__/
+.ipynb_checkpoints/
+*.pyc
+.env
+venv/
+.venv-project/

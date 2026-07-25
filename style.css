@@ -1,0 +1,942 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,700&display=swap');
+
+/* ==========================================================
+   SMARTHOME AI PREMIUM THEME
+   PART 1
+========================================================== */
+
+:root{
+
+    --primary:#183B63;
+    --secondary:#0F8B8D;
+    --accent:#24B8BE;
+
+    --background:#F4F7FB;
+    --card:#FFFFFF;
+
+    --text:#172238;
+    --muted:#6E7B8B;
+
+    --border:#E7ECF3;
+
+    --shadow-sm:0 4px 12px rgba(17,24,39,.05);
+    --shadow-md:0 12px 28px rgba(17,24,39,.08);
+    --shadow-lg:0 24px 60px rgba(17,24,39,.12);
+
+    --radius:18px;
+
+}
+
+/* ==========================================================
+   GLOBAL
+========================================================== */
+
+html,
+body,
+[class*="css"]{
+
+    font-family:"DM Sans",sans-serif;
+    background:var(--background);
+    color:var(--text);
+
+}
+
+.stApp{
+
+    background:linear-gradient(
+        180deg,
+        #f7f9fc 0%,
+        #f3f6fb 100%
+    );
+
+}
+
+.main .block-container{
+
+    max-width:1250px;
+    padding-top:2rem;
+    padding-bottom:3rem;
+
+}
+
+h1,h2,h3{
+
+    color:var(--text);
+    letter-spacing:-.03em;
+
+}
+
+h1{
+
+    font-family:"Fraunces",serif;
+    font-size:3rem;
+    font-weight:700;
+
+}
+
+h2{
+
+    font-weight:700;
+
+}
+
+p{
+
+    color:var(--muted);
+    line-height:1.7;
+
+}
+
+hr{
+
+    border-color:var(--border)!important;
+    margin:2.4rem 0!important;
+
+}
+
+/* ==========================================================
+   SIDEBAR
+========================================================== */
+
+section[data-testid="stSidebar"]{
+
+    background:
+    linear-gradient(
+        180deg,
+        #102C4C 0%,
+        #183B63 100%
+    );
+
+    box-shadow:
+        8px 0 30px rgba(0,0,0,.18);
+
+}
+
+section[data-testid="stSidebar"] *{
+
+    color:white;
+
+}
+
+section[data-testid="stSidebarNav"]{
+
+    padding-top:1rem;
+
+}
+
+section[data-testid="stSidebarNav"] a{
+
+    border-radius:12px;
+    transition:.3s;
+    margin-bottom:.35rem;
+
+}
+
+section[data-testid="stSidebarNav"] a:hover{
+
+    background:rgba(255,255,255,.12);
+    transform:translateX(6px);
+
+}
+
+section[data-testid="stSidebarNav"] a[aria-current="page"]{
+
+    background:rgba(255,255,255,.18);
+
+}
+
+/* ==========================================================
+   BRAND
+========================================================== */
+
+.brand{
+
+    padding:.5rem .4rem 1.8rem;
+
+}
+
+.brand-mark{
+
+    width:42px;
+    height:42px;
+    line-height:42px;
+
+    border-radius:12px;
+
+    display:inline-block;
+    text-align:center;
+
+    font-weight:700;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--accent),
+            var(--secondary)
+        );
+
+    color:white;
+
+    box-shadow:
+        0 10px 25px rgba(36,184,190,.35);
+
+}
+
+.brand-name{
+
+    font-size:1.2rem;
+    font-weight:700;
+    margin-left:10px;
+
+}
+
+.brand-copy{
+
+    margin-top:1rem;
+    font-size:.88rem;
+    color:#d3dfef!important;
+    line-height:1.6;
+
+}
+
+/* ==========================================================
+   EYEBROW
+========================================================== */
+
+.eyebrow{
+
+    color:var(--secondary);
+    text-transform:uppercase;
+
+    letter-spacing:.16em;
+
+    font-size:.8rem;
+
+    font-weight:700;
+
+    margin-bottom:.6rem;
+
+}
+
+/* ==========================================================
+   HERO
+========================================================== */
+
+.hero{
+
+    position:relative;
+
+    overflow:hidden;
+
+    border-radius:30px;
+
+    background:
+
+    linear-gradient(
+        135deg,
+        #183B63 0%,
+        #1C4E75 40%,
+        #148A8E 100%
+    );
+
+    padding:
+
+        3rem
+        3.5rem;
+
+    color:white;
+
+    box-shadow:
+
+        0 25px 70px
+        rgba(24,59,99,.25);
+
+    margin-bottom:2.2rem;
+
+}
+
+.hero::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:420px;
+    height:420px;
+
+    border-radius:50%;
+
+    background:
+
+        rgba(255,255,255,.08);
+
+    top:-140px;
+    right:-120px;
+
+}
+
+.hero::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:180px;
+    height:180px;
+
+    border-radius:50%;
+
+    background:
+
+        rgba(255,255,255,.05);
+
+    bottom:-60px;
+    left:-50px;
+
+}
+
+.hero h1{
+
+    color:white;
+
+    font-size:3rem;
+
+    margin-bottom:1rem;
+
+}
+
+.hero h3{
+
+    color:white;
+
+    font-weight:600;
+
+    font-size:1.35rem;
+
+    margin-bottom:1rem;
+
+}
+
+.hero p{
+
+    color:rgba(255,255,255,.90);
+
+    max-width:720px;
+
+    font-size:1.02rem;
+
+}
+
+/* ==========================================================
+   SECTION INTRO
+========================================================== */
+
+.section-intro{
+
+    color:var(--muted);
+
+    font-size:1rem;
+
+    margin-top:-.2rem;
+
+    margin-bottom:1.6rem;
+
+}
+
+/* ==========================================================
+   METRIC CARDS
+========================================================== */
+
+[data-testid="stMetric"]{
+
+    background:
+
+        linear-gradient(
+            145deg,
+            #ffffff,
+            #f9fbfd
+        );
+
+    border:none;
+
+    border-radius:20px;
+
+    padding:1.5rem;
+
+    border-top:5px solid var(--secondary);
+
+    box-shadow:
+
+        var(--shadow-md);
+
+    transition:.3s;
+
+}
+
+[data-testid="stMetric"]:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:
+
+        var(--shadow-lg);
+
+}
+
+[data-testid="stMetricLabel"]{
+
+    color:var(--muted);
+
+    text-transform:uppercase;
+
+    letter-spacing:.08em;
+
+    font-size:.82rem;
+
+    font-weight:700;
+
+}
+
+[data-testid="stMetricValue"]{
+
+    color:var(--primary);
+
+    font-size:2rem;
+
+    font-weight:700;
+
+}
+
+/* ==========================================================
+   BUTTONS
+========================================================== */
+
+.stButton > button {
+
+    width: 100%;
+    min-height: 52px;
+
+    border: none;
+    border-radius: 14px;
+
+    font-size: 16px;
+    font-weight: 700;
+
+    color: #ffffff !important;
+
+    background: linear-gradient(
+        135deg,
+        #0F8B8D,
+        #1A6DA8
+    );
+
+    box-shadow: 0 12px 28px rgba(15,139,141,.28);
+
+    transition: all .3s ease;
+
+}
+
+.stButton > button:hover {
+
+    color: #ffffff !important;
+
+    transform: translateY(-2px);
+
+    background: linear-gradient(
+        135deg,
+        #118F92,
+        #2379B8
+    );
+
+}
+
+.stButton > button p {
+
+    color: #ffffff !important;
+    font-weight: 700 !important;
+
+}
+
+.stButton > button span {
+
+    color: #ffffff !important;
+
+}
+/* ==========================================================
+   FORM CONTROLS
+========================================================== */
+
+[data-testid="stNumberInput"],
+[data-testid="stSelectbox"],
+[data-testid="stSlider"],
+[data-testid="stSegmentedControl"]{
+
+    background:white;
+
+    border-radius:16px;
+
+    padding:.7rem;
+
+    border:1px solid var(--border);
+
+    box-shadow:var(--shadow-sm);
+
+    margin-bottom:.7rem;
+
+}
+
+input{
+
+    border-radius:12px!important;
+
+}
+
+label{
+
+    font-weight:600;
+
+    color:var(--text);
+
+}
+
+[data-testid="stCaptionContainer"]{
+
+    color:var(--muted);
+
+    font-size:.82rem;
+
+}
+/* ==========================================================
+   FEATURE CARDS
+========================================================== */
+
+.feature-card{
+
+    background:linear-gradient(145deg,#ffffff,#fbfcfe);
+
+    border-radius:22px;
+
+    padding:1.5rem;
+
+    border:1px solid var(--border);
+
+    box-shadow:var(--shadow-md);
+
+    transition:.35s;
+
+    min-height:170px;
+
+}
+
+.feature-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:var(--shadow-lg);
+
+}
+
+.feature-card h3{
+
+    color:var(--primary);
+
+    font-size:1.15rem;
+
+    margin-bottom:.75rem;
+
+}
+
+.feature-card p{
+
+    color:var(--muted);
+
+    font-size:.94rem;
+
+    line-height:1.7;
+
+}
+
+/* ==========================================================
+   PREDICTION RESULT
+========================================================== */
+
+.result-card{
+
+    background:white;
+
+    border-radius:22px;
+
+    padding:2rem;
+
+    border-left:6px solid var(--secondary);
+
+    box-shadow:var(--shadow-lg);
+
+}
+
+.result-card h2{
+
+    margin:0;
+
+}
+
+.result-card p{
+
+    margin-top:.7rem;
+
+}
+
+/* ==========================================================
+   SUCCESS / INFO BOXES
+========================================================== */
+
+.stAlert{
+
+    border:none!important;
+
+    border-radius:18px!important;
+
+    box-shadow:var(--shadow-sm);
+
+}
+
+/* ==========================================================
+   EXPANDERS
+========================================================== */
+
+.streamlit-expanderHeader{
+
+    font-weight:700;
+
+    color:var(--primary);
+
+}
+
+/* ==========================================================
+   TABLES
+========================================================== */
+
+[data-testid="stDataFrame"]{
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    border:1px solid var(--border);
+
+    box-shadow:var(--shadow-md);
+
+}
+
+table{
+
+    border-collapse:collapse!important;
+
+}
+
+thead tr{
+
+    background:var(--primary)!important;
+
+}
+
+thead th{
+
+    color:white!important;
+
+    font-weight:700!important;
+
+}
+
+tbody tr:nth-child(even){
+
+    background:#f7fafc;
+
+}
+
+/* ==========================================================
+   SLIDERS
+========================================================== */
+
+.stSlider{
+
+    padding-top:.4rem;
+
+    padding-bottom:.8rem;
+
+}
+
+.stSlider [role="slider"]{
+
+    background:var(--secondary)!important;
+
+}
+
+.stSlider [data-baseweb="slider"]>div:nth-child(2){
+
+    background:var(--secondary)!important;
+
+}
+
+/* ==========================================================
+   SELECTBOX
+========================================================== */
+
+.stSelectbox div[data-baseweb="select"]{
+
+    border-radius:14px;
+
+}
+
+/* ==========================================================
+   NUMBER INPUT
+========================================================== */
+
+.stNumberInput input{
+
+    border-radius:12px!important;
+
+    padding:.65rem!important;
+
+}
+
+/* ==========================================================
+   TEXT INPUT
+========================================================== */
+
+.stTextInput input{
+
+    border-radius:12px!important;
+
+}
+
+/* ==========================================================
+   STICKY BUTTON BAR
+========================================================== */
+
+.sticky-action-bar{
+
+    position:sticky;
+
+    bottom:18px;
+
+    z-index:99;
+
+    background:rgba(255,255,255,.85);
+
+    backdrop-filter:blur(12px);
+
+    border-radius:18px;
+
+    padding:12px;
+
+    border:1px solid var(--border);
+
+    box-shadow:var(--shadow-lg);
+
+}
+
+/* ==========================================================
+   TABS
+========================================================== */
+
+button[data-baseweb="tab"]{
+
+    font-weight:700;
+
+}
+
+button[data-baseweb="tab"][aria-selected="true"]{
+
+    color:var(--secondary);
+
+}
+
+/* ==========================================================
+   ANIMATIONS
+========================================================== */
+
+@keyframes fadeIn{
+
+0%{
+
+opacity:0;
+
+transform:translateY(20px);
+
+}
+
+100%{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+.main .block-container>*{
+
+animation:fadeIn .5s ease;
+
+}
+
+/* ==========================================================
+   SCROLLBAR
+========================================================== */
+
+::-webkit-scrollbar{
+
+width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+background:#edf2f7;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+background:linear-gradient(
+180deg,
+var(--secondary),
+var(--primary)
+);
+
+border-radius:20px;
+
+}
+
+/* ==========================================================
+   LINKS
+========================================================== */
+
+a{
+
+color:var(--secondary);
+
+font-weight:600;
+
+text-decoration:none;
+
+}
+
+a:hover{
+
+color:var(--primary);
+
+}
+
+/* ==========================================================
+   FOOTER
+========================================================== */
+
+footer{
+
+visibility:hidden;
+
+}
+
+/* ==========================================================
+   MOBILE
+========================================================== */
+
+@media(max-width:900px){
+
+.hero{
+
+padding:2rem;
+
+}
+
+.hero h1{
+
+font-size:2.2rem;
+
+}
+
+[data-testid="stMetric"]{
+
+margin-bottom:1rem;
+
+}
+
+.feature-card{
+
+margin-bottom:1rem;
+
+}
+
+}
+
+/* ==========================================================
+   PREMIUM CARD EFFECT
+========================================================== */
+
+[data-testid="stMetric"],
+.feature-card,
+[data-testid="stDataFrame"]{
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+[data-testid="stMetric"]::before,
+.feature-card::before{
+
+content:"";
+
+position:absolute;
+
+top:0;
+
+left:-100%;
+
+width:80%;
+
+height:100%;
+
+background:linear-gradient(
+90deg,
+transparent,
+rgba(255,255,255,.55),
+transparent
+);
+
+transition:.8s;
+
+}
+
+[data-testid="stMetric"]:hover::before,
+.feature-card:hover::before{
+
+left:130%;
+
+}
+
+/* ==========================================================
+   PAGE TITLE
+========================================================== */
+
+h1{
+
+margin-bottom:.4rem;
+
+}
+
+.section-intro{
+
+font-size:1.02rem;
+
+margin-bottom:2rem;
+
+}
+
+/* ==========================================================
+   END
+========================================================== */
