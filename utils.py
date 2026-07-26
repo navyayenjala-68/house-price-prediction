@@ -22,44 +22,18 @@ def apply_styles() -> None:
         st.markdown(f"<style>{css_path.read_text(encoding='utf-8')}</style>", unsafe_allow_html=True)
 
 import streamlit as st
-
-def render_sidebar():
-
+def render_sidebar() -> None:
+    """Render the concise, shared application identity in the sidebar."""
     st.sidebar.markdown(
         """
         <div class="brand">
-            <span class="brand-mark">S</span>
-            <span class="brand-name">SmartHome AI</span>
-
-            <p class="brand-copy">
-            A data-informed estimate for Ames residential properties.
-            </p>
+            <span class="brand-mark">S</span><span class="brand-name">SmartHome AI</span>
+            <p class="brand-copy">A data-informed estimate for Ames residential properties.</p>
         </div>
         """,
         unsafe_allow_html=True,
     )
 
-    st.sidebar.markdown("---")
-
-    st.sidebar.page_link(
-        "Home.py",
-        label="🏠 Home"
-    )
-
-    st.sidebar.page_link(
-        "pages/Analytics.py",
-        label="📊 Analytics"
-    )
-
-    st.sidebar.page_link(
-        "pages/Predict.py",
-        label="🏡 Predict"
-    )
-
-    st.sidebar.page_link(
-        "pages/About.py",
-        label="ℹ️ About"
-    )
 
 
 @st.cache_resource(show_spinner="Loading the trained model...")
