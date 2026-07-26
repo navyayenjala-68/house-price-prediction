@@ -240,40 +240,14 @@ The application is deployed using Streamlit Cloud.
 Live Demo:
 
 ```
-(Add your deployed URL here)
+https://house-price-prediction-cxahgy5btxagynsjmkrxka.streamlit.app/
 ```
 
 GitHub Repository:
 
 ```
-https://github.com/navyayenjala-68/house-price-prediction
+https://github.com/navyayenjala-68/house-price-prediction.git
 ```
-
----
-
-# 📸 Screenshots
-
-Add screenshots of:
-
-### Home Page
-
-```
-(Add image here)
-```
-
-### Prediction Page
-
-```
-(Add image here)
-```
-
-### Analytics Dashboard
-
-```
-(Add image here)
-```
-
----
 
 # ⚠️ Limitations
 
@@ -286,11 +260,10 @@ Add screenshots of:
 
 # 👩‍💻 Author
 
-**Navya Y**
+**Navya Yenjala**
 
 Machine Learning | Data Analytics | Streamlit Development
 
 
 ---
 
-⭐ If you found this project useful, consider giving it a star!
