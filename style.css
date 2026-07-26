@@ -1,29 +1,26 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 
 /* ==========================================================
-   SMARTHOME AI PREMIUM THEME
-   PART 1
+   SMARTHOME AI UI v2
 ========================================================== */
 
 :root{
 
-    --primary:#183B63;
-    --secondary:#0F8B8D;
-    --accent:#24B8BE;
+    --primary:#2563EB;
+    --primary-dark:#1D4ED8;
 
-    --background:#F4F7FB;
-    --card:#FFFFFF;
+    --background:#F8FAFC;
+    --surface:#FFFFFF;
 
-    --text:#172238;
-    --muted:#6E7B8B;
+    --text:#0F172A;
+    --muted:#64748B;
 
-    --border:#E7ECF3;
+    --border:#E2E8F0;
 
-    --shadow-sm:0 4px 12px rgba(17,24,39,.05);
-    --shadow-md:0 12px 28px rgba(17,24,39,.08);
-    --shadow-lg:0 24px 60px rgba(17,24,39,.12);
+    --shadow-sm:0 1px 3px rgba(15,23,42,.05);
+    --shadow-md:0 10px 30px rgba(15,23,42,.06);
 
-    --radius:18px;
+    --radius:12px;
 
 }
 
@@ -35,48 +32,54 @@ html,
 body,
 [class*="css"]{
 
-    font-family:"DM Sans",sans-serif;
-    background:var(--background);
+    font-family:'Inter',sans-serif;
     color:var(--text);
+    background:var(--background);
 
 }
 
 .stApp{
 
-    background:linear-gradient(
-        180deg,
-        #f7f9fc 0%,
-        #f3f6fb 100%
-    );
+    background:var(--background);
 
 }
 
 .main .block-container{
 
-    max-width:1250px;
-    padding-top:2rem;
+    max-width:1280px;
+    padding-top:5rem;
     padding-bottom:3rem;
+    padding-left:3rem;
+    padding-right:3rem;
 
 }
 
 h1,h2,h3{
 
     color:var(--text);
-    letter-spacing:-.03em;
+    font-family:'Inter',sans-serif;
+    letter-spacing:-0.03em;
 
 }
 
 h1{
 
-    font-family:"Fraunces",serif;
-    font-size:3rem;
+    font-size:2.35rem;
     font-weight:700;
 
 }
 
 h2{
 
+    font-size:1.5rem;
     font-weight:700;
+
+}
+
+h3{
+
+    font-size:1.1rem;
+    font-weight:600;
 
 }
 
@@ -90,7 +93,7 @@ p{
 hr{
 
     border-color:var(--border)!important;
-    margin:2.4rem 0!important;
+    margin:2rem 0!important;
 
 }
 
@@ -100,48 +103,44 @@ hr{
 
 section[data-testid="stSidebar"]{
 
-    background:
-    linear-gradient(
-        180deg,
-        #102C4C 0%,
-        #183B63 100%
-    );
-
-    box-shadow:
-        8px 0 30px rgba(0,0,0,.18);
+    background:#FFFFFF;
+    border-right:1px solid var(--border);
+    box-shadow:none;
 
 }
 
 section[data-testid="stSidebar"] *{
 
-    color:white;
+    color:var(--text);
 
 }
 
 section[data-testid="stSidebarNav"]{
 
-    padding-top:1rem;
+    padding-top:.8rem;
 
 }
 
 section[data-testid="stSidebarNav"] a{
 
-    border-radius:12px;
-    transition:.3s;
+    border-radius:10px;
+    transition:.25s;
     margin-bottom:.35rem;
+    font-weight:500;
 
 }
 
 section[data-testid="stSidebarNav"] a:hover{
 
-    background:rgba(255,255,255,.12);
-    transform:translateX(6px);
+    background:#EFF6FF;
+    color:var(--primary);
 
 }
 
 section[data-testid="stSidebarNav"] a[aria-current="page"]{
 
-    background:rgba(255,255,255,.18);
+    background:#DBEAFE;
+    color:var(--primary);
 
 }
 
@@ -151,40 +150,34 @@ section[data-testid="stSidebarNav"] a[aria-current="page"]{
 
 .brand{
 
-    padding:.5rem .4rem 1.8rem;
+    padding:.4rem .2rem 1.5rem;
 
 }
 
 .brand-mark{
 
-    width:42px;
-    height:42px;
-    line-height:42px;
+    width:38px;
+    height:38px;
 
-    border-radius:12px;
+    line-height:38px;
+
+    border-radius:10px;
 
     display:inline-block;
+
     text-align:center;
 
-    font-weight:700;
-
-    background:
-        linear-gradient(
-            135deg,
-            var(--accent),
-            var(--secondary)
-        );
+    background:var(--primary);
 
     color:white;
 
-    box-shadow:
-        0 10px 25px rgba(36,184,190,.35);
+    font-weight:700;
 
 }
 
 .brand-name{
 
-    font-size:1.2rem;
+    font-size:1.1rem;
     font-weight:700;
     margin-left:10px;
 
@@ -192,9 +185,9 @@ section[data-testid="stSidebarNav"] a[aria-current="page"]{
 
 .brand-copy{
 
-    margin-top:1rem;
-    font-size:.88rem;
-    color:#d3dfef!important;
+    color:var(--muted)!important;
+    margin-top:.8rem;
+    font-size:.85rem;
     line-height:1.6;
 
 }
@@ -205,12 +198,13 @@ section[data-testid="stSidebarNav"] a[aria-current="page"]{
 
 .eyebrow{
 
-    color:var(--secondary);
+    color:var(--primary);
+
     text-transform:uppercase;
 
-    letter-spacing:.16em;
+    font-size:.75rem;
 
-    font-size:.8rem;
+    letter-spacing:.12em;
 
     font-weight:700;
 
@@ -218,112 +212,65 @@ section[data-testid="stSidebarNav"] a[aria-current="page"]{
 
 }
 
-/* ==========================================================
-   HERO
-========================================================== */
+/* ===========================================
+   HERO CARD
+=========================================== */
 
-.hero{
+.hero-card{
 
-    position:relative;
+    background:#ffffff;
 
-    overflow:hidden;
+    border:1px solid #E8EDF4;
 
-    border-radius:30px;
+    border-radius:28px;
 
-    background:
+    padding:52px;
 
-    linear-gradient(
-        135deg,
-        #183B63 0%,
-        #1C4E75 40%,
-        #148A8E 100%
-    );
+    margin-bottom:42px;
 
-    padding:
-
-        3rem
-        3.5rem;
-
-    color:white;
-
-    box-shadow:
-
-        0 25px 70px
-        rgba(24,59,99,.25);
-
-    margin-bottom:2.2rem;
+    box-shadow:0 12px 35px rgba(15,23,42,.05);
 
 }
 
-.hero::before{
+.hero-title{
 
-    content:"";
+    font-size:58px;
 
-    position:absolute;
+    line-height:1.05;
 
-    width:420px;
-    height:420px;
+    font-weight:800;
 
-    border-radius:50%;
+    color:#1E293B;
 
-    background:
+    margin-top:10px;
 
-        rgba(255,255,255,.08);
-
-    top:-140px;
-    right:-120px;
+    margin-bottom:22px;
 
 }
 
-.hero::after{
+.hero-subtitle{
 
-    content:"";
+    font-size:23px;
 
-    position:absolute;
+    color:#475569;
 
-    width:180px;
-    height:180px;
+    margin-bottom:20px;
 
-    border-radius:50%;
-
-    background:
-
-        rgba(255,255,255,.05);
-
-    bottom:-60px;
-    left:-50px;
+    font-weight:500;
 
 }
 
-.hero h1{
+.hero-text{
 
-    color:white;
+    font-size:17px;
 
-    font-size:3rem;
+    color:#64748B;
 
-    margin-bottom:1rem;
+    line-height:1.9;
 
-}
+    max-width:620px;
 
-.hero h3{
-
-    color:white;
-
-    font-weight:600;
-
-    font-size:1.35rem;
-
-    margin-bottom:1rem;
-
-}
-
-.hero p{
-
-    color:rgba(255,255,255,.90);
-
-    max-width:720px;
-
-    font-size:1.02rem;
+    margin-bottom:30px;
 
 }
 
@@ -335,133 +282,56 @@ section[data-testid="stSidebarNav"] a[aria-current="page"]{
 
     color:var(--muted);
 
-    font-size:1rem;
+    font-size:.95rem;
 
     margin-top:-.2rem;
 
     margin-bottom:1.6rem;
 
 }
-
-/* ==========================================================
-   METRIC CARDS
-========================================================== */
-
-[data-testid="stMetric"]{
-
-    background:
-
-        linear-gradient(
-            145deg,
-            #ffffff,
-            #f9fbfd
-        );
-
-    border:none;
-
-    border-radius:20px;
-
-    padding:1.5rem;
-
-    border-top:5px solid var(--secondary);
-
-    box-shadow:
-
-        var(--shadow-md);
-
-    transition:.3s;
-
-}
-
-[data-testid="stMetric"]:hover{
-
-    transform:translateY(-6px);
-
-    box-shadow:
-
-        var(--shadow-lg);
-
-}
-
-[data-testid="stMetricLabel"]{
-
-    color:var(--muted);
-
-    text-transform:uppercase;
-
-    letter-spacing:.08em;
-
-    font-size:.82rem;
-
-    font-weight:700;
-
-}
-
-[data-testid="stMetricValue"]{
-
-    color:var(--primary);
-
-    font-size:2rem;
-
-    font-weight:700;
-
-}
-
 /* ==========================================================
    BUTTONS
 ========================================================== */
 
-.stButton > button {
+.stButton > button{
 
-    width: 100%;
-    min-height: 52px;
+    width:100%;
+    min-height:46px;
 
-    border: none;
-    border-radius: 14px;
+    background:var(--primary);
 
-    font-size: 16px;
-    font-weight: 700;
+    color:#fff!important;
 
-    color: #ffffff !important;
+    border:1px solid var(--primary);
 
-    background: linear-gradient(
-        135deg,
-        #0F8B8D,
-        #1A6DA8
-    );
+    border-radius:10px;
 
-    box-shadow: 0 12px 28px rgba(15,139,141,.28);
+    font-size:.95rem;
+    font-weight:600;
 
-    transition: all .3s ease;
+    transition:all .25s ease;
+
+    box-shadow:none;
 
 }
 
-.stButton > button:hover {
+.stButton > button:hover{
 
-    color: #ffffff !important;
+    background:var(--primary-dark);
 
-    transform: translateY(-2px);
+    border-color:var(--primary-dark);
 
-    background: linear-gradient(
-        135deg,
-        #118F92,
-        #2379B8
-    );
+    transform:translateY(-1px);
 
 }
 
-.stButton > button p {
+.stButton > button p,
+.stButton > button span{
 
-    color: #ffffff !important;
-    font-weight: 700 !important;
-
-}
-
-.stButton > button span {
-
-    color: #ffffff !important;
+    color:#fff!important;
 
 }
+
 /* ==========================================================
    FORM CONTROLS
 ========================================================== */
@@ -471,31 +341,52 @@ section[data-testid="stSidebarNav"] a[aria-current="page"]{
 [data-testid="stSlider"],
 [data-testid="stSegmentedControl"]{
 
-    background:white;
-
-    border-radius:16px;
-
-    padding:.7rem;
+    background:#fff;
 
     border:1px solid var(--border);
 
-    box-shadow:var(--shadow-sm);
+    border-radius:10px;
 
-    margin-bottom:.7rem;
+    padding:.45rem;
+
+    margin-bottom:.8rem;
+
+    box-shadow:none;
+
+    transition:.2s;
+
+}
+
+[data-testid="stNumberInput"]:hover,
+[data-testid="stSelectbox"]:hover{
+
+    border-color:#CBD5E1;
 
 }
 
 input{
 
-    border-radius:12px!important;
+    border:none!important;
+
+    box-shadow:none!important;
+
+    font-size:.95rem;
+
+}
+
+input:focus{
+
+    outline:none!important;
 
 }
 
 label{
 
+    color:var(--text)!important;
+
     font-weight:600;
 
-    color:var(--text);
+    font-size:.93rem;
 
 }
 
@@ -503,46 +394,53 @@ label{
 
     color:var(--muted);
 
-    font-size:.82rem;
+    font-size:.8rem;
+
+    margin-top:-6px;
+
+    margin-bottom:10px;
 
 }
+
 /* ==========================================================
    FEATURE CARDS
 ========================================================== */
 
 .feature-card{
 
-    background:linear-gradient(145deg,#ffffff,#fbfcfe);
-
-    border-radius:22px;
-
-    padding:1.5rem;
+    background:#fff;
 
     border:1px solid var(--border);
 
-    box-shadow:var(--shadow-md);
+    border-radius:12px;
 
-    transition:.35s;
+    padding:1.5rem;
 
-    min-height:170px;
+    min-height:165px;
+
+    box-shadow:var(--shadow-sm);
+
+    transition:.25s ease;
 
 }
 
 .feature-card:hover{
 
-    transform:translateY(-8px);
+    transform:translateY(-3px);
 
-    box-shadow:var(--shadow-lg);
+    box-shadow:var(--shadow-md);
 
 }
 
 .feature-card h3{
 
-    color:var(--primary);
+    color:var(--text);
 
-    font-size:1.15rem;
+    font-size:1rem;
 
-    margin-bottom:.75rem;
+    margin-bottom:.6rem;
+
+    font-weight:700;
 
 }
 
@@ -550,53 +448,136 @@ label{
 
     color:var(--muted);
 
-    font-size:.94rem;
+    font-size:.92rem;
 
-    line-height:1.7;
+    line-height:1.65;
 
 }
 
 /* ==========================================================
-   PREDICTION RESULT
+   RESULT CARD
 ========================================================== */
 
 .result-card{
 
-    background:white;
+    background:#fff;
 
-    border-radius:22px;
+    border:1px solid var(--border);
+
+    border-radius:14px;
 
     padding:2rem;
 
-    border-left:6px solid var(--secondary);
-
-    box-shadow:var(--shadow-lg);
+    box-shadow:var(--shadow-sm);
 
 }
 
 .result-card h2{
 
-    margin:0;
+    color:var(--text);
+
+    margin-bottom:.4rem;
 
 }
 
 .result-card p{
 
-    margin-top:.7rem;
+    color:var(--muted);
 
 }
 
 /* ==========================================================
-   SUCCESS / INFO BOXES
+   STICKY ACTION BAR
+========================================================== */
+
+.sticky-action-bar{
+
+    position:sticky;
+
+    bottom:15px;
+
+    z-index:20;
+
+    background:rgba(255,255,255,.95);
+
+    border:1px solid var(--border);
+
+    border-radius:12px;
+
+    padding:.9rem;
+
+    backdrop-filter:blur(10px);
+
+    box-shadow:var(--shadow-md);
+
+}
+/* ==========================================================
+   METRIC CARDS
+========================================================== */
+
+[data-testid="stMetric"]{
+
+    background:#FFFFFF;
+
+    border:1px solid var(--border);
+
+    border-radius:14px;
+
+    padding:1.35rem;
+
+    box-shadow:var(--shadow-sm);
+
+    transition:.25s;
+
+}
+
+[data-testid="stMetric"]:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:var(--shadow-md);
+
+    border-color:#CBD5E1;
+
+}
+
+[data-testid="stMetricLabel"]{
+
+    color:var(--muted);
+
+    font-size:.78rem;
+
+    font-weight:600;
+
+    text-transform:uppercase;
+
+    letter-spacing:.08em;
+
+}
+
+[data-testid="stMetricValue"]{
+
+    color:var(--text);
+
+    font-size:1.8rem;
+
+    font-weight:700;
+
+}
+
+/* ==========================================================
+   ALERTS
 ========================================================== */
 
 .stAlert{
 
-    border:none!important;
+    background:#FFFFFF!important;
 
-    border-radius:18px!important;
+    border:1px solid var(--border)!important;
 
-    box-shadow:var(--shadow-sm);
+    border-radius:12px!important;
+
+    box-shadow:none!important;
 
 }
 
@@ -606,27 +587,35 @@ label{
 
 .streamlit-expanderHeader{
 
-    font-weight:700;
+    font-size:.96rem;
 
-    color:var(--primary);
+    font-weight:600;
+
+    color:var(--text);
 
 }
 
 /* ==========================================================
-   TABLES
+   DATAFRAMES
 ========================================================== */
 
 [data-testid="stDataFrame"]{
 
-    border-radius:18px;
-
-    overflow:hidden;
+    background:#FFFFFF;
 
     border:1px solid var(--border);
 
-    box-shadow:var(--shadow-md);
+    border-radius:12px;
+
+    overflow:hidden;
+
+    box-shadow:var(--shadow-sm);
 
 }
+
+/* ==========================================================
+   TABLE
+========================================================== */
 
 table{
 
@@ -634,47 +623,69 @@ table{
 
 }
 
-thead tr{
+thead{
 
-    background:var(--primary)!important;
+    background:#F8FAFC;
 
 }
 
 thead th{
 
-    color:white!important;
+    color:var(--text)!important;
 
     font-weight:700!important;
+
+    border-bottom:1px solid var(--border)!important;
+
+}
+
+tbody td{
+
+    color:var(--text);
+
+}
+
+tbody tr{
+
+    transition:.2s;
 
 }
 
 tbody tr:nth-child(even){
 
-    background:#f7fafc;
+    background:#FBFCFE;
+
+}
+
+tbody tr:hover{
+
+    background:#F1F5F9;
 
 }
 
 /* ==========================================================
-   SLIDERS
+   SLIDER
 ========================================================== */
 
 .stSlider{
 
-    padding-top:.4rem;
+    padding-top:.25rem;
 
-    padding-bottom:.8rem;
+    padding-bottom:.6rem;
 
 }
 
 .stSlider [role="slider"]{
 
-    background:var(--secondary)!important;
+    background:var(--primary)!important;
+
+    border:2px solid white!important;
 
 }
 
 .stSlider [data-baseweb="slider"]>div:nth-child(2){
 
-    background:var(--secondary)!important;
+    background:var(--primary)!important;
 
 }
 
@@ -684,7 +695,7 @@ tbody tr:nth-child(even){
 
 .stSelectbox div[data-baseweb="select"]{
 
-    border-radius:14px;
+    border-radius:10px;
 
 }
 
@@ -694,9 +705,7 @@ tbody tr:nth-child(even){
 
 .stNumberInput input{
 
-    border-radius:12px!important;
-
-    padding:.65rem!important;
+    border:none!important;
 
 }
 
@@ -706,33 +715,7 @@ tbody tr:nth-child(even){
 
 .stTextInput input{
 
-    border-radius:12px!important;
-
-}
-
-/* ==========================================================
-   STICKY BUTTON BAR
-========================================================== */
-
-.sticky-action-bar{
-
-    position:sticky;
-
-    bottom:18px;
-
-    z-index:99;
-
-    background:rgba(255,255,255,.85);
-
-    backdrop-filter:blur(12px);
-
-    border-radius:18px;
-
-    padding:12px;
-
-    border:1px solid var(--border);
-
-    box-shadow:var(--shadow-lg);
+    border:none!important;
 
 }
 
@@ -742,43 +725,167 @@ tbody tr:nth-child(even){
 
 button[data-baseweb="tab"]{
 
-    font-weight:700;
+    font-weight:600;
+
+    color:var(--muted);
 
 }
 
 button[data-baseweb="tab"][aria-selected="true"]{
 
-    color:var(--secondary);
+    color:var(--primary);
+
+    border-bottom:2px solid var(--primary);
 
 }
 
 /* ==========================================================
-   ANIMATIONS
+   CHARTS
 ========================================================== */
 
-@keyframes fadeIn{
+[data-testid="stPlotlyChart"],
+[data-testid="stVegaLiteChart"]{
 
-0%{
+    background:#FFFFFF;
 
-opacity:0;
+    border:1px solid var(--border);
 
-transform:translateY(20px);
+    border-radius:14px;
+
+    padding:.75rem;
+
+    box-shadow:var(--shadow-sm);
+
+}
+
+/* ==========================================================
+   INFO BLOCKS
+========================================================== */
+
+.element-container .stMarkdown{
+
+    border-radius:10px;
 
 }
 
-100%{
+/* ==========================================================
+   ANALYTICS CARDS
+========================================================== */
 
-opacity:1;
+.analytics-card{
 
-transform:translateY(0);
+    background:#FFFFFF;
+
+    border:1px solid var(--border);
+
+    border-radius:14px;
+
+    padding:1.4rem;
+
+    box-shadow:var(--shadow-sm);
 
 }
+
+.analytics-card h3{
+
+    margin-bottom:.6rem;
+
+    color:var(--text);
+
+}
+
+.analytics-card p{
+
+    color:var(--muted);
+
+}
+
+/* ==========================================================
+   PREDICTION SUMMARY
+========================================================== */
+
+.prediction-summary{
+
+    background:#F8FAFC;
+
+    border-left:4px solid var(--primary);
+
+    border-radius:12px;
+
+    padding:1.25rem;
+
+    margin-top:1rem;
+
+}
+/* ==========================================================
+   PAGE ANIMATION
+========================================================== */
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+        transform:translateY(12px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
 
 }
 
 .main .block-container>*{
 
-animation:fadeIn .5s ease;
+    animation:fadeUp .45s ease;
+
+}
+
+/* ==========================================================
+   HOVER EFFECTS
+========================================================== */
+
+[data-testid="stMetric"],
+.feature-card,
+.analytics-card,
+[data-testid="stDataFrame"],
+.hero{
+
+    transition:all .25s ease;
+
+}
+
+[data-testid="stMetric"]:hover,
+.feature-card:hover,
+.analytics-card:hover,
+.hero:hover{
+
+    transform:translateY(-2px);
+
+}
+
+/* ==========================================================
+   INPUT FOCUS
+========================================================== */
+
+input:focus,
+textarea:focus{
+
+    outline:none!important;
+
+}
+
+[data-testid="stNumberInput"]:focus-within,
+[data-testid="stSelectbox"]:focus-within,
+[data-testid="stTextInput"]:focus-within{
+
+    border-color:var(--primary);
+
+    box-shadow:0 0 0 3px rgba(37,99,235,.10);
 
 }
 
@@ -788,25 +895,27 @@ animation:fadeIn .5s ease;
 
 ::-webkit-scrollbar{
 
-width:10px;
+    width:10px;
 
 }
 
 ::-webkit-scrollbar-track{
 
-background:#edf2f7;
+    background:#F8FAFC;
 
 }
 
 ::-webkit-scrollbar-thumb{
 
-background:linear-gradient(
-180deg,
-var(--secondary),
-var(--primary)
-);
+    background:#CBD5E1;
 
-border-radius:20px;
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#94A3B8;
 
 }
 
@@ -816,17 +925,54 @@ border-radius:20px;
 
 a{
 
-color:var(--secondary);
+    color:var(--primary);
 
-font-weight:600;
+    text-decoration:none;
 
-text-decoration:none;
+    transition:.2s;
 
 }
 
 a:hover{
 
-color:var(--primary);
+    color:var(--primary-dark);
+
+}
+
+/* ==========================================================
+   IMAGES
+========================================================== */
+
+img{
+
+    border-radius:12px;
+
+}
+
+/* ==========================================================
+   CONTAINERS
+========================================================== */
+
+.element-container{
+
+    margin-bottom:.35rem;
+
+}
+
+.stColumns{
+
+    gap:1rem;
+
+}
+
+/* ==========================================================
+   INFO / SUCCESS
+========================================================== */
+
+[data-testid="stInfo"],
+[data-testid="stSuccess"]{
+
+    border-radius:12px;
 
 }
 
@@ -836,7 +982,13 @@ color:var(--primary);
 
 footer{
 
-visibility:hidden;
+    visibility:hidden;
+
+}
+
+header{
+
+    background:transparent;
 
 }
 
@@ -844,99 +996,242 @@ visibility:hidden;
    MOBILE
 ========================================================== */
 
-@media(max-width:900px){
+@media(max-width:992px){
 
 .hero{
 
-padding:2rem;
+    padding:2rem;
 
 }
 
 .hero h1{
 
-font-size:2.2rem;
+    font-size:2rem;
+
+}
+
+.main .block-container{
+
+    padding-left:1rem;
+
+    padding-right:1rem;
 
 }
 
 [data-testid="stMetric"]{
 
-margin-bottom:1rem;
+    margin-bottom:1rem;
 
 }
 
 .feature-card{
 
-margin-bottom:1rem;
+    margin-bottom:1rem;
+
+}
+
+.stColumns{
+
+    gap:.5rem;
 
 }
 
 }
 
 /* ==========================================================
-   PREMIUM CARD EFFECT
+   LARGE SCREEN
 ========================================================== */
 
-[data-testid="stMetric"],
-.feature-card,
-[data-testid="stDataFrame"]{
+@media(min-width:1400px){
 
-position:relative;
+.main .block-container{
 
-overflow:hidden;
+    max-width:1320px;
 
 }
-
-[data-testid="stMetric"]::before,
-.feature-card::before{
-
-content:"";
-
-position:absolute;
-
-top:0;
-
-left:-100%;
-
-width:80%;
-
-height:100%;
-
-background:linear-gradient(
-90deg,
-transparent,
-rgba(255,255,255,.55),
-transparent
-);
-
-transition:.8s;
-
-}
-
-[data-testid="stMetric"]:hover::before,
-.feature-card:hover::before{
-
-left:130%;
 
 }
 
 /* ==========================================================
-   PAGE TITLE
+   SMALL DETAILS
 ========================================================== */
 
-h1{
+label{
 
-margin-bottom:.4rem;
+    margin-bottom:.2rem;
 
 }
 
-.section-intro{
+.stMarkdown{
 
-font-size:1.02rem;
+    line-height:1.65;
 
-margin-bottom:2rem;
+}
+
+.stCaption{
+
+    color:var(--muted);
+
+}
+
+/* ==========================================================
+   REMOVE STREAMLIT DEFAULT SPACING
+========================================================== */
+
+.block-container{
+
+    padding-top:5rem;
+
+}
+
+[data-testid="stVerticalBlock"]{
+
+    gap:.65rem;
 
 }
 
 /* ==========================================================
    END
 ========================================================== */
+.predict-hero{
+padding-bottom:30px;
+}
+
+.predict-hero h1{
+font-size:54px;
+font-weight:800;
+margin-top:10px;
+margin-bottom:12px;
+color:#1E293B;
+}
+
+.predict-hero p{
+font-size:18px;
+max-width:760px;
+line-height:1.8;
+color:#64748B;
+}
+
+.form-card{
+background:#fff;
+padding:40px;
+border-radius:24px;
+border:1px solid #E8EDF4;
+box-shadow:0 10px 30px rgba(15,23,42,.05);
+margin-top:25px;
+margin-bottom:35px;
+}
+
+.button-card{
+margin-top:20px;
+margin-bottom:30px;
+}
+
+.result-card-large{
+
+background:white;
+
+padding:40px;
+
+border-radius:26px;
+
+border-left:6px solid #3467EB;
+
+box-shadow:0 18px 45px rgba(15,23,42,.08);
+
+margin-top:20px;
+
+margin-bottom:25px;
+
+}
+
+.result-label{
+
+font-size:15px;
+
+letter-spacing:2px;
+
+color:#64748B;
+
+font-weight:700;
+
+margin-bottom:18px;
+
+}
+
+.result-price{
+
+font-size:62px;
+
+font-weight:800;
+
+color:#1E293B;
+
+}
+/* ===========================
+   ANALYTICS PAGE
+===========================*/
+
+.page-title{
+
+font-size:52px;
+
+font-weight:800;
+
+margin-top:10px;
+
+margin-bottom:15px;
+
+color:#1F2937;
+
+}
+
+.page-description{
+
+font-size:18px;
+
+line-height:1.8;
+
+color:#64748B;
+
+max-width:760px;
+
+margin-bottom:35px;
+
+}
+
+.insight-card{
+
+background:#FFFFFF;
+
+padding:30px;
+
+border-radius:22px;
+
+border-left:5px solid #3468F5;
+
+box-shadow:0 12px 30px rgba(0,0,0,.06);
+
+margin-top:30px;
+
+}
+
+.insight-card h3{
+
+margin-bottom:18px;
+
+font-size:28px;
+
+}
+
+.insight-card li{
+
+margin-bottom:12px;
+
+color:#64748B;
+
+font-size:16px;
+
+line-height:1.7;
+
+}
